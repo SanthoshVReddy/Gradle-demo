@@ -1,0 +1,14 @@
+1	2	//Introduces a set of Maven style conventions
+//(tasks, source locations, dependency configurations, etc)
+group	= ”com.balu”
+version = ”1.0 SNAPSHOT”
+repositories {
+//resolve all external dependencies via Maven central
+mavenCentral() 9	}
+dependencies {
+//each name (compile, testCompile, etc) refers to
+//a configuration introduced by the java plugin
+compile”commons io:commons io:2.4”
+testCompile ”junit:junit:4.11”
+runtime	files(”test/foo.jar”, ”lib/utils.jar”) 16	}
+
